@@ -1,0 +1,2 @@
+# USB Sentinel
+This is a simple program that will watch for newly attached or detached USB devices. All you need is Rust and libusb installed to make use of this. Run `cargo run --release` to build and run the program.
