@@ -24,8 +24,8 @@ fn main() {
         // load the stuff from the file
         let f = File::open(DATABASE_PATH).unwrap();
         let rdr = BufReader::new(f);
-        let tmp: Dev = serde_json::from_reader(rdr).unwrap();
-        database.push(tmp);
+        let mut tmp: Vec<Dev> = serde_json::from_reader(rdr).unwrap();
+        database.append(&mut tmp);
     } else {
         println!("[-] No database found. Generating new profile...");
         // print device info
